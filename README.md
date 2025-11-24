@@ -1,6 +1,6 @@
 # Plug and Productionize your AI agents with AWS Bedrock AgentCore
 
-###Description
+### Description
 
 This repository provides a simple way to deploy locally developed AI agents using AWS Bedrock AgentCore.
 
@@ -18,7 +18,7 @@ Next, we’ll see how just a few lines of code make it possible to connect our a
 | AI tool                        | DuckDuckGoSearchResults                                                     |
 
 
-##Project folder structure
+## Project folder structure
 
 langgraph-openai-agentcore-demo/
 ├── README.md
@@ -27,7 +27,7 @@ langgraph-openai-agentcore-demo/
 │   └── requirements.txt
 └── secret-policy.json
 
-##Local Installation Steps & Testing
+## Local Installation Steps & Testing
 
 Follow these steps to set up the project:
 
@@ -80,10 +80,10 @@ Steps to store your API key in AWS Secrets Manager:
        python agent.py 
 ```
 
-##Architecture
+## Architecture
 
 When a query is passed to the LLM, it first checks whether it already has the information needed to answer. If not, it triggers a tool call to the DuckDuckGoSearchResults web search tool to retrieve the required data. The agent may loop through this process, calling the web search tool multiple times until it gathers enough information. Once satisfied, the LLM generates the final response.
 
 ![alt text](image-2.png)
 
-##Deployment to AWS Bedrock AgentCore
+## Deployment to AWS Bedrock AgentCore
