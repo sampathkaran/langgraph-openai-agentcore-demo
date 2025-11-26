@@ -11,9 +11,9 @@ import os
 import json
 
 client = boto3.client("secretsmanager")
-response = client.get_secret_value(SecretId="my-api-key")
+response = client.get_secret_value(SecretId="openai-api-key") # input the secret name
 secret_json =json.loads(response["SecretString"])
-api_key = secret_json["api-key"]
+api_key = secret_json["api-key"] # input the key name of the secret
 
 #Intialize the bedrock
 aws_app = BedrockAgentCoreApp()
@@ -60,6 +60,6 @@ def langgraph_bedrock(payload):
     return result['messages'][-1].content
 
 if __name__== "__main__":
-    #print(langgraph_bedrock({"messages": "Who won the formula1 singapore 2025? give the answer briefly "}))
-    aws_app.run() # This starts the http server on port 8080
+    print(langgraph_bedrock({"messages": "Who won the formula1 singapore 2025? give the answer briefly "}))
+    #aws_app.run() # This starts the http server on port 8080
   
