@@ -60,6 +60,6 @@ def langgraph_bedrock(payload):
     return result['messages'][-1].content
 
 if __name__== "__main__":
-    print(langgraph_bedrock({"messages": "Who won the formula1 singapore 2025? give the answer briefly "}))
-    #aws_app.run() # This starts the http server on port 8080
+    #print(langgraph_bedrock({"messages": "Who won the formula1 singapore 2025? give the answer briefly "}))
+    aws_app.run() # This starts the http server on port 8080
   
